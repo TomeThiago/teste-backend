@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 
 // Configuração do CORS para permitir requisições do front-end
 app.use(cors({
-  origin: 'http://localhost:5173'  // Substitua pela URL do seu front-end
+  origin: process.env.APP_URL || '*'  // Substitua pela URL do seu front-end
 }));
 
 // Permitir JSON no corpo das requisições
@@ -51,6 +51,8 @@ app.delete('/usuarios/:id', async (req, res) => {
   .catch(e => res.status(500).send(`Erro ao excluir usuário: ${e}`));
 });
 
-app.listen(3000, () => {
-  console.log('Servidor rodando em http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
