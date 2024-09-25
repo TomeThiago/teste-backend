@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "express-timeout-handler": "^2.2.2"
+  },
+  "name": "projetos",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "devDependencies": {
+    "prisma": "^5.20.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
